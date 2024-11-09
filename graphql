@@ -1,0 +1,47 @@
+Access the GraphiQL Interface: Open a web browser and visit http://localhost:5000/graphql to access the GraphiQL interface.
+
+    Write Sample Queries and Mutations:
+
+    Query to Fetch Products:
+
+graphql
+query {
+  products {
+    id
+    name
+    price
+    quantity
+    category
+  }
+}
+
+**Mutation Example to Add a New Product**:
+
+graphql
+mutation {
+  addProduct(name: "Donut", price: 1.5, quantity: 50, category: "Pastries") {
+    id
+    name
+  }
+}
+
+**Mutation Example to Update a Product**:
+
+graphql
+mutation {
+  updateProduct(id: 1, price: 2.75) {
+    id
+    name
+    price
+  }
+}
+
+**Mutation Example to Delete a Product**:
+
+graphql
+mutation {
+  deleteProduct(id: 2) {
+    id
+    name
+  }
+}
